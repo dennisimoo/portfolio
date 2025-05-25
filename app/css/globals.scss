@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: rgb(211, 216, 232);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromTop {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInFromBottom {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.animate-slideInFromLeft {
+  animation: slideInFromLeft 1s ease-out;
+}
+
+.animate-slideInFromRight {
+  animation: slideInFromRight 1s ease-out;
+}
+
+.animate-slideInFromTop {
+  animation: slideInFromTop 1s ease-out;
+}
+
+.animate-slideInFromBottom {
+  animation: slideInFromBottom 1s ease-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 1s ease-out;
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: #0d1224;
+}
+
+#sticky-card-1 {
+  --index: 1;
+}
+
+#sticky-card-2 {
+  --index: 2;
+}
+
+#sticky-card-3 {
+  --index: 3;
+}
+
+#sticky-card-4 {
+  --index: 4;
+}
+
+.sticky-card {
+  // padding-top: calc(var(--index) * 2.5rem);
+  top: calc(var(--index) * 4rem);
+}
