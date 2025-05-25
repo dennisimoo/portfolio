@@ -2,6 +2,9 @@ import axios from 'axios';
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+// This is required for static export
+export const dynamic = "force-static";
+
 // Create and configure Nodemailer transporter
 const transporter = nodemailer.createTransport({
   service: 'gmail',
